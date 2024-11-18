@@ -1,0 +1,16 @@
+version: "3.9"
+services:
+  tech-db:
+    image: postgres
+    restart: always
+    container_name: tech-platform
+    ports:
+      - 5444:5432
+    environment:
+      POSTGRES_PASSWORD: Biggy012
+      PGDATA: /data/postgres
+    volumes:
+      - postgres:/data/postgres
+
+volumes:
+  postgres:
